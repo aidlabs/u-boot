@@ -84,9 +84,9 @@
 
 /* Serial port */
 #define CONFIG_MXC_UART
-#define CONFIG_MXC_UART_BASE		UART5_BASE
-#define CONFIG_CONS_INDEX		5
-#define CONFIG_CONSOLE_PORT		"ttymxc4"
+#define CONFIG_MXC_UART_BASE		UART2_BASE
+#define CONFIG_CONS_INDEX		2
+#define CONFIG_CONSOLE_PORT		"ttymxc1"
 #define CONFIG_BAUDRATE			115200
 
 #define CONFIG_MODULE_FUSE
