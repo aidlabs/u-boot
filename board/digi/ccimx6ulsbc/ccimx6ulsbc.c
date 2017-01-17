@@ -84,7 +84,10 @@ static iomux_v3_cfg_t const uart5_pads[] = {
 	MX6_PAD_UART5_TX_DATA__UART5_DCE_TX | MUX_PAD_CTRL(UART_PAD_CTRL),
 	MX6_PAD_UART5_RX_DATA__UART5_DCE_RX | MUX_PAD_CTRL(UART_PAD_CTRL),
 };
-
+static iomux_v3_cfg_t const uart2_pads[] = {
+       MX6_PAD_UART2_TX_DATA__UART2_DCE_TX | MUX_PAD_CTRL(UART_PAD_CTRL),
+       MX6_PAD_UART2_RX_DATA__UART2_DCE_RX | MUX_PAD_CTRL(UART_PAD_CTRL),
+};
 static iomux_v3_cfg_t const ext_gpios_pads[] = {
 	MX6_PAD_NAND_CE1_B__GPIO4_IO14 | MUX_PAD_CTRL(GPI_PAD_CTRL),
 	MX6_PAD_GPIO1_IO05__GPIO1_IO05 | MUX_PAD_CTRL(GPI_PAD_CTRL),
@@ -146,7 +149,8 @@ static void setup_iomux_fec(int fec_id)
 
 static void setup_iomux_uart(void)
 {
-	imx_iomux_v3_setup_multiple_pads(uart5_pads, ARRAY_SIZE(uart5_pads));
+	//imx_iomux_v3_setup_multiple_pads(uart5_pads, ARRAY_SIZE(uart5_pads));
+	imx_iomux_v3_setup_multiple_pads(uart2_pads, ARRAY_SIZE(uart2_pads));
 }
 
 #ifdef CONFIG_FSL_ESDHC
